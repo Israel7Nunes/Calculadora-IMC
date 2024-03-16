@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="imgs/calculadora.png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC - Calculadora de Massa Corporal</title>
+</head>
+
+<body>
+    <header>
+        <h1>Índice de Massa Corporal</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="calculadora">
+
+            <label for="altura">Altura</label>
+            <input type="number" name="" id="altura">
+            <br>
+
+            <label for="peso">Peso (Kg):</label>
+            <input type="number" name="" id="peso">
+            <br>
+
+            <button onclick="calcularIMC()">Calcular</button>
+
+            <p>Seu índice de massa corporal é: <br><span id="resultado"></span>
+            </p>
+
+        </div>
+
+        <img src="imgs/Uma_calculadora-removebg-preview.png" alt="">
+
+    </div>
+
+    <script>
+        function calcularIMC() {
+            const altura = document.getElementById('altura').value;
+            const peso = document.getElementById('peso').value;
+            const imc = peso / (altura ** 2);
+
+            document.getElementById('resultado').textContent = imc.toFixed(2);
+        }
+
+    </script>
+
+    <footer>
+        <p class="p1">Site feito por Israel Salvalaio Nunes | 16/03/2024 &copy;</p>
+        <p class="p2"><a href="https://www.flaticon.com/br/icones-gratis/calculadora" title="calculadora ícones">Calculadora ícones criados por Freepik - Flaticon</a></p>
+    </footer>
+
+</body>
+
+
+
+</html>
